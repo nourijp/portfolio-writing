@@ -16,17 +16,17 @@ interface Props {
 
 const { 
   title, 
-  description = "A minimalist blog template focusing on clean typography and distraction-free reading experience.", 
+  description = "Selected writing samples across communications, documentation, education, essays, creative media, and bilingual work.", 
   image = "/og-image.png",
   type = "website",
   publishedDate,
   modifiedDate,
-  author = "Brook Team"
+  author = "Hamed Nouri"
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = image.startsWith('/') ? new URL(image, Astro.site) : image;
-const siteName = "Brook Blog";
+const siteName = "Hamed Nouri — Writing Archive";
 
 // Strukturierte Daten (JSON-LD) für bessere SEO
 const jsonLDWebsite = {
@@ -68,7 +68,7 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title} | Brook</title>
+    <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
 
@@ -126,7 +126,7 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
     <div class="bg-white dark:bg-black transition-colors duration-300">
       <header class="mx-auto max-w-4xl py-8">
         <div class="flex items-center justify-between">
-          <a href="/" class="text-2xl font-semibold" transition:animate="fade">Brook2</a>
+          <a href="/" class="text-2xl font-semibold" transition:animate="fade">Writing Archive</a>
 
           <!-- Desktop Navigation -->
           <div class="hidden md:flex items-center gap-6">
@@ -175,7 +175,7 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
       <footer class="max-w-4xl mx-auto py-8 border-t border-gray-200 dark:border-gray-800 mt-12">
           <div class="flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="text-sm text-gray-500 dark:text-gray-500">
-              Made by <a href="https://templatedeck.com" target="_blank" rel="noopener noreferrer" class="hover:text-gray-900 dark:hover:text-gray-100">templatedeck.com</a> • Distributed by <a href="https://themewagon.com" target="_blank" rel="noopener noreferrer" class="hover:text-gray-900 dark:hover:text-gray-100">ThemeWagon</a>
+              &copy; 2026 Hamed Nouri. All rights reserved. <br> <a href="mailto:writing@hamednouri.com" class="hover:text-gray-900 dark:hover:text-gray-100">writing@hamednouri.com</a>
             </div>
             <nav class="flex items-center gap-4">
               <a href="/" class="nav-link-footer">Home</a>

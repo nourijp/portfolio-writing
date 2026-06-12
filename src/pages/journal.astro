@@ -17,17 +17,17 @@ const posts = sortedPosts.map(post => ({
 }));
 ---
 
-<BaseLayout title="Journal">
+<BaseLayout title="Archive — Hamed Nouri Writing">
   <div class="max-w-3xl mx-auto">
     <header class="mb-12 text-center" transition:animate="fade">
-      <h1 class="text-5xl mb-4">Journal</h1>
+      <h1 class="text-5xl mb-4">Archive</h1>
       <p class="text-xl text-muted-foreground">
-        Explore our latest thoughts, ideas, and stories
+        Selected writing samples across communications, documentation, essays, education, creative media, and bilingual work.
       </p>
     </header>
 
     <div transition:animate="fade">
-      <PostListWithThumbnails posts={posts} showTags={true} title="All Posts" />
+      <PostListWithThumbnails posts={posts} showTags={true} title="All Writing" />
     </div>
   </div>
 </BaseLayout>
